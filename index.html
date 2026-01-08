@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tổng Kho Tủ Vải Lắp Ghép - Xả Kho Giá Gốc</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* --- CSS SETUP --- */
+        :root {
+            --primary-color: #ee4d2d; /* Màu Cam Shopee chuẩn */
+            --secondary-color: #2c3e50;
+            --bg-light: #f8f9fa;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1100px; margin: auto; padding: 0 20px; }
+        a { text-decoration: none; }
+        
+        /* HEADER */
+        header { background: #fff; padding: 15px 0; box-shadow: 0 2px 5px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .nav-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 24px; font-weight: bold; color: var(--secondary-color); text-transform: uppercase; }
+        .hotline { color: var(--primary-color); font-weight: bold; }
+
+        /* HERO SECTION */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80');
+            background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center;
+        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 10px; text-transform: uppercase; }
+        .hero p { font-size: 1.2rem; margin-bottom: 30px; }
+        
+        /* NÚT SHOPEE ĐẶC BIỆT */
+        .btn-shopee { 
+            background-color: var(--primary-color); color: white; padding: 18px 45px; 
+            font-size: 1.3rem; font-weight: bold; border-radius: 8px; 
+            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.4); transition: 0.3s; 
+            display: inline-flex; align-items: center; gap: 10px;
+            animation: pulse 2s infinite; border: 2px solid white;
+        }
+        .btn-shopee:hover { transform: translateY(-3px); background-color: #d73211; }
+        .btn-shopee i { font-size: 1.5rem; }
+
+        /* FEATURES */
+        .features { padding: 60px 0; background: var(--bg-light); text-align: center; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 40px; }
+        .feature-box { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .feature-box i { font-size: 40px; color: var(--secondary-color); margin-bottom: 15px; }
+
+        /* OFFER SECTION */
+        .offer-section { background: #fff3e0; padding: 60px 0; text-align: center; }
+        .offer-box { 
+            background: white; max-width: 600px; margin: auto; padding: 40px; 
+            border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 2px dashed var(--primary-color);
+        }
+        .price-tag { font-size: 2.5rem; color: var(--primary-color); font-weight: bold; margin: 20px 0; }
+        .price-tag del { color: #999; font-size: 1.5rem; margin-right: 15px; }
+        
+        /* FOOTER */
+        footer { background: #222; color: #aaa; text-align: center; padding: 20px; margin-top: 40px; }
+
+        /* ANIMATION */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(238, 77, 45, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(238, 77, 45, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(238, 77, 45, 0); }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 1.8rem; }
+            .btn-shopee { width: 100%; justify-content: center; box-sizing: border-box; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-flex">
+            <div class="logo">TỔNG KHO TỦ VẢI</div>
+            <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" style="color: var(--primary-color); font-weight: bold;">
+                <i class="fas fa-shopping-cart"></i> Mua trên Shopee
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Tủ Vải Khung Thép Titan Siêu Chịu Lực</h1>
+            <p>Xả kho giá gốc - Chỉ dành cho 50 khách hàng đầu tiên hôm nay</p>
+            
+            <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-shopee">
+                <i class="fas fa-shopping-bag"></i> MUA NGAY TRÊN SHOPEE
+            </a>
+            
+            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">
+                <i class="fas fa-check-circle"></i> Được kiểm tra hàng & Freeship
+            </p>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 style="text-align: center;">TẠI SAO 5000+ KHÁCH HÀNG TIN DÙNG?</h2>
+            <div class="grid-3">
+                <div class="feature-box">
+                    <i class="fas fa-dumbbell"></i>
+                    <h3>Chịu Tải 70KG</h3>
+                    <p>Khung thép sơn tĩnh điện 25mm chắc chắn, treo đồ nặng thoải mái.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-truck"></i>
+                    <h3>Miễn Phí Vận Chuyển</h3>
+                    <p>Đặt qua Shopee để được áp mã Freeship Xtra và hoàn xu.</p>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Bảo Hành 12 Tháng</h3>
+                    <p>Lỗi 1 đổi 1 trong 30 ngày. Cam kết chất lượng từ Tổng Kho.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="offer-section">
+        <div class="container">
+            <div class="offer-box">
+                <h2 style="color: var(--secondary-color);">ƯU ĐÃI ĐỘC QUYỀN TRÊN SHOPEE</h2>
+                <p>Số lượng có hạn. Giá sẽ quay về mức cũ sau 24h.</p>
+                
+                <div class="price-tag">
+                    <del>550.000đ</del> 299.000đ
+                </div>
+
+                <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-shopee" style="width: 100%; justify-content: center;">
+                    BẤM ĐỂ MUA GIÁ 299K <i class="fas fa-arrow-right"></i>
+                </a>
+                
+                <p style="margin-top: 20px; color: #666; font-size: 0.9em;">
+                    *Lưu ý: Bạn hãy áp mã giảm giá của Shop & mã Freeship khi thanh toán nhé!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Tổng Kho Tủ Vải Lắp Ghép. All rights reserved.</p>
+            <p>Hotline hỗ trợ: 09xx.xxx.xxx</p>
+        </div>
+    </footer>
+
+</body>
+</html>
