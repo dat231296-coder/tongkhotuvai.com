@@ -30,7 +30,7 @@
         .logo {
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
-            font-size: 22px; /* Giảm nhẹ font size để tên dài không bị tràn */
+            font-size: 22px;
             color: var(--brand-color);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -46,23 +46,39 @@
         .section-title { text-align: center; font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; color: var(--dark); }
         .img-desc { font-size: 14px; color: #666; font-style: italic; margin-top: 8px; text-align: center; }
 
-        /* BUTTONS */
+        /* BUTTONS (Đã chỉnh sửa để cân đối hơn) */
         .btn-main { 
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-            width: 100%; padding: 18px; text-align: center; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; /* Căn giữa nội dung */
+            gap: 10px;
+            width: 100%;
+            max-width: 400px; /* Giới hạn chiều rộng tối đa */
+            margin: 15px auto; /* Căn giữa nút trong thẻ cha */
+            padding: 16px 20px; /* Điều chỉnh padding */
             background: var(--gradient); color: white; 
             font-weight: 700; font-size: 18px; border-radius: 50px; 
             text-decoration: none; border: none; cursor: pointer; 
             box-shadow: 0 5px 20px rgba(238, 77, 45, 0.4); 
-            margin-top: 15px; transition: transform 0.2s;
+            transition: transform 0.2s;
             animation: pulse 2s infinite;
         }
         .btn-main:active { transform: scale(0.95); }
 
-        /* STICKY FOOTER */
+        /* STICKY FOOTER (Đã chỉnh sửa để cân đối hơn) */
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px 20px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; z-index: 100; border-top: 1px solid #eee; }
         .bottom-price { font-size: 24px; font-weight: 800; color: var(--brand-color); }
-        .bottom-btn { background: var(--primary); color: white; padding: 12px 30px; border-radius: 30px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3); }
+        .bottom-btn { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; /* Căn giữa nội dung */
+            gap: 8px;
+            background: var(--primary); color: white; 
+            padding: 12px 25px; /* Điều chỉnh padding */
+            border-radius: 30px; 
+            font-weight: 700; text-decoration: none; 
+            box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3); 
+        }
 
         @keyframes pulse {
             0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(238, 77, 45, 0.7); }
