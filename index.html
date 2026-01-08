@@ -3,178 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tổng Kho Tủ Vải Cao Cấp - Bảo Hành 12 Tháng</title>
+    <title>Tổng Kho Tủ Vải Cao Cấp | Premium Quality</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
-        /* --- CẤU HÌNH GIAO DIỆN --- */
+        /* --- CẤU HÌNH GIAO DIỆN PREMIUM --- */
         :root {
-            --primary: #ee4d2d; /* Cam Shopee */
-            --secondary: #004d40; /* Xanh rêu đậm */
-            --text: #333;
-            --bg: #f4f4f4;
+            --primary-gradient: linear-gradient(135deg, #ff512f 0%, #dd2476 100%); /* Màu cam đỏ hiện đại */
+            --secondary-color: #1f2937; /* Màu đen than sang trọng */
+            --accent-color: #10b981; /* Màu xanh lá tin cậy */
+            --bg-color: #f3f4f6;
+            --card-bg: #ffffff;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0; color: var(--text); background: var(--bg); line-height: 1.6; padding-bottom: 70px; }
-        .container { max-width: 900px; margin: auto; padding: 0 15px; background: white; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
-        img { max-width: 100%; height: auto; display: block; margin: 20px auto; border-radius: 8px; }
-        a { text-decoration: none; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            padding-bottom: 80px; /* Chừa chỗ cho thanh menu đáy */
+        }
+
+        h1, h2, h3 { font-family: 'Poppins', sans-serif; margin: 0; }
+        .container { max-width: 800px; margin: 0 auto; overflow: hidden; }
         
-        /* HEADER & HERO */
-        header { background: var(--secondary); color: white; padding: 15px; text-align: center; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
-        .hero { background: url('https://images.unsplash.com/photo-1556020685-ae79c95e3d35?auto=format&fit=crop&w=1000') center/cover; padding: 80px 20px; text-align: center; color: white; position: relative; }
-        .hero::before { content:''; position: absolute; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.7); }
-        .hero-content { position: relative; z-index: 2; }
-        .hero h1 { font-size: 28px; margin-bottom: 10px; text-transform: uppercase; line-height: 1.4; color: #ffeb3b; }
+        /* HEADER */
+        header {
+            background: white;
+            padding: 15px 20px;
+            box-shadow: var(--shadow-sm);
+            position: sticky; top: 0; z-index: 100;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+        .logo { font-weight: 700; font-size: 18px; color: #dd2476; text-transform: uppercase; letter-spacing: 1px; }
+        .trusted-badge { font-size: 12px; background: #ecfdf5; color: var(--accent-color); padding: 5px 10px; border-radius: 20px; font-weight: 600; }
+
+        /* HERO SECTION - Gây ấn tượng mạnh */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1556020685-ae79c95e3d35?auto=format&fit=crop&w=1000');
+            background-size: cover; background-position: center;
+            color: white; padding: 60px 20px; text-align: center;
+            border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;
+            box-shadow: var(--shadow-lg); margin-bottom: 30px;
+        }
+        .hero h1 { font-size: 28px; line-height: 1.3; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
+        .hero-badge { display: inline-block; background: #ffeb3b; color: #333; font-weight: bold; padding: 5px 15px; border-radius: 50px; font-size: 14px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(255, 235, 59, 0.3); }
+
+        /* CARD STYLE - Khối nội dung đẹp */
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 25px;
+            margin: 20px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid rgba(0,0,0,0.02);
+        }
         
+        .section-title {
+            text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 25px;
+            position: relative; display: inline-block; width: 100%;
+        }
+        .section-title::after {
+            content: ''; display: block; width: 50px; height: 4px; 
+            background: var(--primary-gradient); margin: 8px auto; border-radius: 2px;
+        }
+
+        /* PAIN POINTS LIST */
+        .pain-point { display: flex; align-items: center; margin-bottom: 15px; background: #fff1f2; padding: 12px; border-radius: 10px; color: #be123c; font-weight: 500; }
+        .pain-point i { margin-right: 12px; font-size: 20px; }
+
+        /* FEATURES GRID */
+        .feature-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .feature-item { background: #f9fafb; padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; }
+        .feature-item:hover { transform: translateY(-5px); background: white; box-shadow: var(--shadow-lg); }
+        .feature-icon { width: 50px; height: 50px; background: #e0e7ff; color: #4f46e5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 20px; }
+        
+        /* PRICING & OFFER */
+        .price-tag { text-align: center; margin: 20px 0; }
+        .price-old { color: #9ca3af; text-decoration: line-through; font-size: 16px; display: block; }
+        .price-new { color: #dd2476; font-size: 36px; font-weight: 800; font-family: 'Poppins', sans-serif; }
+        
+        /* FORM DESIGN */
+        .input-group { margin-bottom: 15px; }
+        .input-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; color: #4b5563; }
+        .input-field {
+            width: 100%; padding: 14px; border: 2px solid #e5e7eb; border-radius: 10px;
+            font-size: 16px; outline: none; transition: 0.3s; box-sizing: border-box; font-family: 'Inter', sans-serif;
+        }
+        .input-field:focus { border-color: #dd2476; background: #fffbfc; }
+
         /* BUTTONS */
-        .btn { display: inline-block; padding: 15px 30px; background: var(--primary); color: white; font-weight: bold; border-radius: 50px; text-transform: uppercase; box-shadow: 0 4px 15px rgba(238, 77, 45, 0.4); animation: pulse 2s infinite; border: 2px solid white; cursor: pointer; }
-        .btn:hover { transform: scale(1.05); background: #d73211; }
-        
-        /* SECTIONS */
-        .section { padding: 40px 20px; border-bottom: 1px solid #eee; }
-        .section-title { text-align: center; font-size: 24px; color: var(--secondary); margin-bottom: 30px; font-weight: 800; text-transform: uppercase; position: relative; }
-        .section-title::after { content:''; display: block; width: 60px; height: 3px; background: var(--primary); margin: 10px auto; }
-        
-        /* FORM ĐẶT HÀNG (MỚI) */
-        .order-form-container { background: #fff3e0; padding: 30px; border-radius: 10px; border: 2px dashed var(--primary); margin-top: 20px; }
-        .form-group { margin-bottom: 15px; text-align: left; }
-        .form-group label { display: block; font-weight: bold; margin-bottom: 5px; color: var(--secondary); }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; box-sizing: border-box; }
-        .form-header { text-align: center; margin-bottom: 20px; }
-        
-        /* TABLE & FAQ */
-        .specs-table { width: 100%; border-collapse: collapse; margin-top: 20px; }
-        .specs-table td { padding: 12px; border: 1px solid #ddd; }
-        .specs-table tr:nth-child(even) { background: #f9f9f9; }
-        .faq-question { font-weight: bold; cursor: pointer; background: #eee; padding: 15px; border-radius: 5px; margin-bottom: 10px; }
-        .faq-answer { padding: 15px; display: none; background: white; border: 1px solid #eee; margin-top: -5px; margin-bottom: 15px; }
+        .btn-main {
+            display: block; width: 100%; padding: 16px; text-align: center;
+            background: var(--primary-gradient); color: white;
+            font-weight: 700; font-size: 18px; border-radius: 12px;
+            text-decoration: none; border: none; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(221, 36, 118, 0.4);
+            transition: 0.3s;
+        }
+        .btn-main:active { transform: scale(0.98); }
+        .btn-shopee { background: #ee4d2d; color: white; display: flex; justify-content: center; align-items: center; gap: 10px; }
 
-        /* BOTTOM BAR */
-        .bottom-bar { position: fixed; bottom: 0; left: 0; right: 0; background: white; padding: 10px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
-        .price-box { padding-left: 15px; }
-        .current-price { color: var(--primary); font-size: 20px; font-weight: bold; }
-        .old-price { color: #999; text-decoration: line-through; font-size: 14px; }
-        .btn-small { background: var(--primary); color: white; padding: 10px 20px; border-radius: 5px; font-weight: bold; margin-right: 15px; }
+        /* STICKY BOTTOM BAR */
+        .bottom-nav {
+            position: fixed; bottom: 0; left: 0; width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px); /* Hiệu ứng kính mờ */
+            padding: 12px 20px;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
+            display: flex; align-items: center; justify-content: space-between;
+            z-index: 1000; box-sizing: border-box;
+        }
+        .bottom-price { font-weight: 700; font-size: 20px; color: #dd2476; }
+        .bottom-btn {
+            background: var(--primary-gradient); color: white;
+            padding: 10px 25px; border-radius: 30px; font-weight: 600; text-decoration: none;
+            box-shadow: 0 4px 12px rgba(221, 36, 118, 0.3);
+        }
 
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(238, 77, 45, 0.7); } 70% { box-shadow: 0 0 0 15px rgba(238, 77, 45, 0); } 100% { box-shadow: 0 0 0 0 rgba(238, 77, 45, 0); } }
+        /* Responsive Fix */
+        @media (min-width: 600px) {
+            .feature-grid { grid-template-columns: 1fr 1fr; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <header><i class="fas fa-warehouse"></i> Tổng Kho Tủ Vải Lắp Ghép</header>
+    <header>
+        <div class="logo">KFS WARDROBE</div>
+        <div class="trusted-badge"><i class="fas fa-check-circle"></i> Uy tín 100%</div>
+    </header>
 
-        <div class="hero">
-            <div class="hero-content">
-                <h1>XẢ KHO TỦ VẢI KHUNG THÉP CHỊU LỰC</h1>
-                <p>Giải pháp gọn gàng - Chống ẩm mốc - Bảo hành 12 tháng</p>
-                <a href="#dat-hang-ngay" class="btn">MUA NGAY (GIẢM 40%)</a>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Nỗi khổ của bạn?</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;"><i class="fas fa-times-circle" style="color:red"></i> Phòng trọ, chung cư mini quá chật hẹp?</li>
-                <li style="margin-bottom: 10px;"><i class="fas fa-times-circle" style="color:red"></i> Tủ gỗ cồng kềnh, khó vận chuyển khi chuyển nhà?</li>
-                <li style="margin-bottom: 10px;"><i class="fas fa-times-circle" style="color:red"></i> Quần áo bừa bộn, ẩm mốc vì không có chỗ để?</li>
-            </ul>
-        </div>
-
-        <div class="section" style="background: #fff;">
-            <h2 class="section-title">Giải Pháp Từ Chúng Tôi</h2>
-            <div style="margin-bottom: 20px;">
-                <h3 style="color: var(--primary);"><i class="fas fa-check"></i> Khung Thép Titan Chịu Lực</h3>
-                <p>Treo được 50-70kg quần áo, bao treo cả người lớn không lo sập.</p>
-            </div>
-            <div style="margin-bottom: 20px;">
-                <h3 style="color: var(--primary);"><i class="fas fa-check"></i> Vải Oxford Cao Cấp</h3>
-                <p>Chống thấm nước, ngăn bụi, dễ dàng vệ sinh lau chùi.</p>
-            </div>
-            <div style="margin-bottom: 20px;">
-                <h3 style="color: var(--primary);"><i class="fas fa-check"></i> Lắp Ghép 15 Phút</h3>
-                <p>Ai cũng có thể tự lắp đặt mà không cần khoan đục.</p>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Feedback Khách Hàng</h2>
-            <div style="background: #f9f9f9; padding: 15px; border-radius: 8px; margin-bottom: 10px;">
-                <strong>Nguyễn Văn A:</strong> "Tủ chắc chắn hơn mình nghĩ, treo đồ thoải mái. Giao hàng nhanh."
-                <div style="color: #ffc107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            </div>
-            <div style="background: #f9f9f9; padding: 15px; border-radius: 8px;">
-                <strong>Trần Thị B:</strong> "Lắp dễ lắm, mình con gái mà 20p là xong. Phòng gọn hẳn."
-                <div style="color: #ffc107"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            </div>
-        </div>
-
-        <div class="section" id="dat-hang-ngay" style="background: #fff;">
-            <h2 class="section-title">Đặt Hàng Ngay</h2>
-            
-            <div style="text-align: center; margin-bottom: 20px;">
-                <span style="font-size: 18px; color: #777; text-decoration: line-through;">Giá gốc: 550.000đ</span><br>
-                <span style="font-size: 28px; color: var(--primary); font-weight: bold;">Giá hôm nay: 299.000đ</span>
-                <p style="color: red; font-weight: bold;">(Miễn phí ship cho 50 đơn đầu tiên)</p>
-            </div>
-
-            <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn" style="width: 100%; box-sizing: border-box; text-align: center; background: #ee4d2d; margin-bottom: 20px;">
-                <i class="fas fa-shopping-bag"></i> Mua trên Shopee (Freeship)
-            </a>
-
-            <div style="text-align: center; margin: 10px 0;">--- HOẶC ---</div>
-
-            <div class="order-form-container">
-                <div class="form-header">
-                    <h3 style="margin: 0; color: var(--secondary);">ĐẶT HÀNG NHANH (COD)</h3>
-                    <p style="font-size: 14px; margin: 5px 0;">Nhân viên sẽ gọi lại xác nhận đơn hàng</p>
-                </div>
-                
-                <form id="orderForm" onsubmit="xuLyDatHang(event)">
-                    <div class="form-group">
-                        <label>Họ và Tên:</label>
-                        <input type="text" id="name" required placeholder="Nhập tên của bạn...">
-                    </div>
-                    <div class="form-group">
-                        <label>Số Điện Thoại:</label>
-                        <input type="tel" id="phone" required placeholder="Nhập số điện thoại...">
-                    </div>
-                    <div class="form-group">
-                        <label>Địa Chỉ Nhận Hàng:</label>
-                        <textarea id="address" rows="2" required placeholder="Số nhà, đường, xã/phường..."></textarea>
-                    </div>
-                    <div class="form-group">
-                        <label>Chọn Màu Sắc:</label>
-                        <select id="color">
-                            <option value="Xanh Than">Xanh Than</option>
-                            <option value="Do Do">Đỏ Đô</option>
-                            <option value="Hoa Tiet 3D">Họa Tiết 3D</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%; border-radius: 5px; background: var(--secondary);">GỬI ĐƠN HÀNG NGAY</button>
-                </form>
-            </div>
-        </div>
-        
-        <br><br><br>
+    <div class="hero">
+        <div class="hero-badge">BEST SELLER 2026</div>
+        <h1>TỦ VẢI KHUNG TITAN<br>CHỊU LỰC 70KG</h1>
+        <p>Giải pháp tối ưu không gian sống. Bền bỉ - Gọn gàng - Tiết kiệm.</p>
+        <a href="#mua-ngay" class="btn-main btn-shopee" style="max-width: 300px; margin: 20px auto; border-radius: 50px;">
+            <i class="fas fa-shopping-cart"></i> Mua Ngay Trên Shopee
+        </a>
     </div>
 
-    <div class="bottom-bar">
-        <div class="price-box">
-            <div class="old-price">550.000đ</div>
-            <div class="current-price">299.000đ</div>
+    <div class="container">
+        <div class="card">
+            <h2 class="section-title">NỖI KHỔ CỦA BẠN?</h2>
+            <div class="pain-point">
+                <i class="fas fa-times-circle"></i>
+                <span>Phòng trọ chật, quần áo vứt lung tung?</span>
+            </div>
+            <div class="pain-point">
+                <i class="fas fa-times-circle"></i>
+                <span>Tủ gỗ quá đắt và nặng nề khi chuyển nhà?</span>
+            </div>
+            <div class="pain-point">
+                <i class="fas fa-times-circle"></i>
+                <span>Tủ vải giá rẻ ọp ẹp, treo vài bộ là sập?</span>
+            </div>
         </div>
-        <a href="#dat-hang-ngay" class="btn-small">MUA NGAY</a>
+
+        <div class="card" style="background: transparent; box-shadow: none; border: none; padding: 0;">
+            <h2 class="section-title">GIẢI PHÁP TỐI ƯU</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Khung Thép Titan</h3>
+                    <p style="font-size: 14px; color: #666;">Đường kính 25mm siêu cứng, chịu tải 70kg tương đương 2 người lớn.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Vải Oxford 3 Lớp</h3>
+                    <p style="font-size: 14px; color: #666;">Chống nước, chống ẩm mốc, dai khó rách và dễ dàng giặt sạch.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-magic"></i></div>
+                    <h3>Lắp Ghép 15 Phút</h3>
+                    <p style="font-size: 14px; color: #666;">Khớp nối nhựa ABS thông minh, ai cũng tự lắp được không cần khoan.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Bảo Hành 12 Tháng</h3>
+                    <p style="font-size: 14px; color: #666;">Lỗi 1 đổi 1 trong 30 ngày đầu tiên nếu có lỗi từ nhà sản xuất.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id="mua-ngay" style="border: 2px solid #dd2476;">
+            <h2 class="section-title">ĐẶT HÀNG NGAY</h2>
+            
+            <div class="price-tag">
+                <span class="price-old">Giá gốc: 550.000đ</span>
+                <span class="price-new">299.000đ</span>
+                <div style="color: #10b981; font-weight: 600; margin-top: 5px;">
+                    <i class="fas fa-truck"></i> Freeship cho 50 đơn đầu tiên
+                </div>
+            </div>
+
+            <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-main btn-shopee" style="margin-bottom: 20px;">
+                <i class="fas fa-shopping-bag"></i> Mua trên Shopee (Có mã giảm)
+            </a>
+
+            <div style="text-align: center; color: #9ca3af; margin: 15px 0; font-size: 14px;">— HOẶC ĐIỀN FORM (COD) —</div>
+
+            <form id="orderForm" onsubmit="xuLyDonHang(event)">
+                <div class="input-group">
+                    <label>Họ tên người nhận</label>
+                    <input type="text" id="name" class="input-field" placeholder="Ví dụ: Nguyễn Văn A" required>
+                </div>
+                <div class="input-group">
+                    <label>Số điện thoại</label>
+                    <input type="tel" id="phone" class="input-field" placeholder="Ví dụ: 09xx.xxx.xxx" required>
+                </div>
+                <div class="input-group">
+                    <label>Địa chỉ nhận hàng</label>
+                    <input type="text" id="address" class="input-field" placeholder="Số nhà, Đường, Xã/Phường..." required>
+                </div>
+                <div class="input-group">
+                    <label>Chọn màu sắc</label>
+                    <select id="color" class="input-field">
+                        <option value="Xanh Than">Xanh Than (Sạch sẽ)</option>
+                        <option value="Do Do">Đỏ Đô (Nổi bật)</option>
+                        <option value="Hoa Tiet">Họa Tiết 3D (Trẻ trung)</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-main">GỬI ĐƠN HÀNG NGAY</button>
+                <p style="text-align: center; font-size: 13px; color: #666; margin-top: 10px;">
+                    *Nhân viên sẽ gọi lại xác nhận trước khi gửi hàng.
+                </p>
+            </form>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">KHÁCH HÀNG NÓI GÌ?</h2>
+            <div style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
+                <div style="color: #fbbf24; font-size: 14px; margin-bottom: 5px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="margin: 0; font-style: italic;">"Hàng đẹp, khung chắc chắn hơn mình nghĩ nhiều. Giao hàng nhanh."</p>
+                <div style="font-weight: 600; margin-top: 5px; font-size: 14px;">- Chị Lan (Hà Nội)</div>
+            </div>
+            <div>
+                <div style="color: #fbbf24; font-size: 14px; margin-bottom: 5px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p style="margin: 0; font-style: italic;">"Lắp dễ lắm, phòng gọn hẳn. 299k quá rẻ cho chất lượng này."</p>
+                <div style="font-weight: 600; margin-top: 5px; font-size: 14px;">- Anh Tuấn (TP.HCM)</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-nav">
+        <div>
+            <div style="font-size: 12px; color: #666; text-decoration: line-through;">550.000đ</div>
+            <div class="bottom-price">299.000đ</div>
+        </div>
+        <a href="#mua-ngay" class="bottom-btn">MUA NGAY</a>
     </div>
 
     <script>
-        function xuLyDatHang(e) {
+        function xuLyDonHang(e) {
             e.preventDefault();
-            var name = document.getElementById('name').value;
-            var phone = document.getElementById('phone').value;
-            var color = document.getElementById('color').value;
-            
-            // Hiện thông báo (Sau này có thể nối Google Sheet ở đây)
-            alert("Cảm ơn " + name + "! Đơn hàng màu " + color + " đã được gửi. Shop sẽ gọi lại SĐT " + phone + " sớm nhất!");
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            alert(`Cảm ơn ${name}! Đơn hàng đã được ghi nhận. Shop sẽ liên hệ SĐT ${phone} để chốt đơn ngay!`);
             document.getElementById('orderForm').reset();
         }
     </script>
