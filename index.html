@@ -3,162 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KFS WARDROBE | Tủ Vải Khung Thép Cao Cấp</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <title>Tổng Kho Tủ Vải - Chuyên Sỉ Lẻ Tủ Vải Cao Cấp</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* --- CẤU HÌNH GIAO DIỆN KFS STORE --- */
-        :root {
-            --brand-color: #d81b60; /* Màu hồng đậm logo KFS */
-            --primary: #ee4d2d; /* Màu cam Shopee */
-            --dark: #1f2937;
-            --light: #f9fafb;
-            --gradient: linear-gradient(135deg, #ee4d2d 0%, #ff4081 100%);
-        }
-
-        body { font-family: 'Inter', sans-serif; background-color: var(--light); color: var(--dark); margin: 0; padding-bottom: 90px; }
-        .container { max-width: 800px; margin: 0 auto; overflow: hidden; }
-        img { max-width: 100%; height: auto; display: block; margin: 15px auto; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-        
-        /* HEADER */
-        header { 
-            background: white; padding: 15px; text-align: center; 
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 99; 
-        }
-        .logo {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 800;
-            font-size: 24px;
-            color: var(--brand-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* HERO SECTION */
-        .hero { background: white; padding: 25px 20px; text-align: center; border-bottom-left-radius: 30px; border-bottom-right-radius: 30px; margin-bottom: 25px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); }
-        .hero h1 { font-family: 'Poppins', sans-serif; font-size: 26px; margin: 10px 0; line-height: 1.3; color: var(--dark); font-weight: 800; }
-        .hero-badge { background: #ffeb3b; color: #333; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 13px; display: inline-block; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-
-        /* SECTION CARD */
-        .card { background: white; border-radius: 16px; padding: 25px 20px; margin: 20px 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); }
-        .section-title { text-align: center; font-family: 'Poppins', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid #f0f0f0; padding-bottom: 15px; color: var(--dark); }
-        .img-desc { font-size: 14px; color: #666; font-style: italic; margin-top: 8px; text-align: center; }
-
-        /* BUTTONS */
-        .btn-main { 
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-            width: 100%; padding: 18px; text-align: center; 
-            background: var(--gradient); color: white; 
-            font-weight: 700; font-size: 18px; border-radius: 50px; 
-            text-decoration: none; border: none; cursor: pointer; 
-            box-shadow: 0 5px 20px rgba(238, 77, 45, 0.4); 
-            margin-top: 15px; transition: transform 0.2s;
-            animation: pulse 2s infinite;
-        }
-        .btn-main:active { transform: scale(0.95); }
-
-        /* STICKY FOOTER */
-        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px 20px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; z-index: 100; border-top: 1px solid #eee; }
-        .bottom-price { font-size: 24px; font-weight: 800; color: var(--brand-color); }
-        .bottom-btn { background: var(--primary); color: white; padding: 12px 30px; border-radius: 30px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3); }
-
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(238, 77, 45, 0.7); }
-            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(238, 77, 45, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(238, 77, 45, 0); }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap');
+        body { font-family: 'Roboto', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1558997519-83ea9252edf8?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
 
-    <header>
-        <div class="logo">KFS WARDROBE</div>
-        <div style="font-size: 12px; color: #666; margin-top: 5px; font-weight: 500;">HỆ THỐNG TỔNG KHO TỦ VẢI</div>
-    </header>
-
-    <div class="hero">
-        <div class="hero-badge">BEST SELLER 2026</div>
-        <h1>TỦ VẢI KHUNG TITAN<br>SIÊU CHỊU LỰC</h1>
-        
-        <img src="banner.jpg" alt="Tủ vải khung thép cao cấp KFS">
-        
-        <div style="font-size: 32px; color: var(--brand-color); font-weight: 800; margin: 10px 0;">299.000đ</div>
-        <p style="color: #555; font-size: 15px; margin-bottom: 20px;">
-            <i class="fas fa-check-circle" style="color: green;"></i> Hàng chính hãng 
-            <i class="fas fa-check-circle" style="color: green; margin-left: 10px;"></i> Freeship Xtra
-        </p>
-        
-        <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-main">
-            <i class="fas fa-shopping-bag"></i> MUA NGAY TRÊN SHOPEE
-        </a>
-    </div>
-
-    <div class="container">
-        
-        <div class="card">
-            <h2 class="section-title">CHẤP HẾT CÁC LOẠI ĐỒ NẶNG</h2>
-            <div style="text-align: center;">
-                <img src="chiu-luc.jpg" alt="Test chịu lực bình nước">
-                <div class="img-desc">Thực tế: Khung Titan chịu tải hàng chục bình nước 20L.</div>
-            </div>
-            <ul style="padding-left: 20px; line-height: 1.8; color: #444; margin-top: 15px;">
-                <li>✅ <strong>Khung thép Titan 25mm:</strong> Cứng gấp đôi tủ thường.</li>
-                <li>✅ <strong>Kết cấu vững chãi:</strong> Không lo xiêu vẹo, đổ sập.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">NÂNG CẤP KHỚP NỐI</h2>
-            <div style="text-align: center;">
-                <img src="khop-noi.jpg" alt="Khớp nối kim loại">
-                <div class="img-desc">Khớp nối siêu bền (bánh xe đè không vỡ).</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">VẢI OXFORD CAO CẤP</h2>
-            <img src="vai.jpg" alt="Chất liệu vải">
-            <p style="text-align: justify; color: #555;">
-                Vải Oxford chuyên dụng có độ dai vượt trội, <strong>chống thấm nước</strong> và <strong>ngăn bụi</strong> tuyệt đối. Dễ dàng tháo rời để giặt sạch.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">BẢNG KÍCH THƯỚC</h2>
-            <img src="kich-thuoc.jpg" alt="Các kích thước tủ">
-            <p style="text-align: center; color: #666;">Đủ size từ 85cm đến 2m05 phù hợp mọi phòng.</p>
-        </div>
-
-        <div class="card" id="dat-hang" style="border: 2px dashed var(--primary); background: #fff5f5;">
-            <h2 class="section-title" style="color: var(--primary); border: none; margin-bottom: 10px;">ƯU ĐÃI ĐỘC QUYỀN</h2>
-            
-            <p style="text-align: center; font-size: 16px; margin-bottom: 20px;">
-                Chương trình giảm giá <strong>40%</strong> chỉ áp dụng khi đặt hàng qua Shopee hôm nay!
-            </p>
-
-            <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-main" style="background: #ee4d2d; font-size: 20px; padding: 20px;">
-                <i class="fas fa-bolt"></i> MUA NGAY GIÁ 299K
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-blue-800 tracking-wider">
+                <i class="fa-solid fa-warehouse mr-2"></i>TỔNG KHO TỦ VẢI
             </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-blue-600 transition">Trang Chủ</a>
+                <a href="#products" class="hover:text-blue-600 transition">Sản Phẩm</a>
+                <a href="#features" class="hover:text-blue-600 transition">Ưu Điểm</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Liên Hệ</a>
+            </div>
+            <a href="#contact" class="bg-orange-500 hover:bg-orange-600 text-white font-bold py-2 px-6 rounded-full shadow-lg transition transform hover:scale-105">
+                Đặt Hàng Ngay
+            </a>
+        </div>
+    </nav>
 
-            <div style="text-align: center; margin-top: 15px;">
-                <span style="font-size: 13px; color: #666; background: white; padding: 5px 10px; border-radius: 10px; border: 1px solid #eee;">
-                    <i class="fas fa-shield-alt"></i> Được kiểm tra hàng & Hoàn tiền Shopee
-                </span>
+    <section id="home" class="hero-bg h-[600px] flex items-center text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase leading-tight">
+                Xả Kho Tủ Vải <br> <span class="text-orange-400">Giá Rẻ Vô Địch</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light max-w-2xl mx-auto">
+                Chuyên cung cấp tủ vải khung gỗ, khung inox cao cấp. Bền đẹp - Chịu lực tốt - Lắp ráp dễ dàng.
+            </p>
+            <div class="flex justify-center gap-4">
+                <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition">
+                    Xem Mẫu Mới
+                </a>
+                <a href="https://tongkhotuvai.online" class="bg-white text-blue-800 hover:bg-gray-100 font-bold py-3 px-8 rounded-lg text-lg transition">
+                    Truy Cập Web
+                </a>
             </div>
         </div>
+    </section>
 
-    </div>
-
-    <div class="bottom-nav">
-        <div>
-            <div style="font-size: 13px; text-decoration: line-through; color: #999;">550.000đ</div>
-            <div class="bottom-price">299.000đ</div>
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-800 uppercase">Tại Sao Chọn Tổng Kho Tủ Vải?</h2>
+                <div class="w-20 h-1 bg-orange-500 mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="text-center p-6 border rounded-xl hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-hammer"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Khung Chịu Lực Tốt</h3>
+                    <p class="text-gray-600">Khung gỗ hoặc inox đường kính lớn, chịu tải trọng lên tới 150kg, không lo sập gãy.</p>
+                </div>
+                <div class="text-center p-6 border rounded-xl hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-orange-100 text-orange-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Vải Bọc Cao Cấp</h3>
+                    <p class="text-gray-600">Chất liệu vải Oxford dày dặn, chống thấm, chống bụi và dễ dàng vệ sinh.</p>
+                </div>
+                <div class="text-center p-6 border rounded-xl hover:shadow-xl transition">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fa-solid fa-truck-fast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Giao Hàng Toàn Quốc</h3>
+                    <p class="text-gray-600">Ship COD toàn quốc, kiểm tra hàng trước khi thanh toán. Đổi trả nếu lỗi.</p>
+                </div>
+            </div>
         </div>
-        <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="bottom-btn">
-            MUA NGAY <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
+    </section>
+
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 uppercase">Sản Phẩm Bán Chạy</h2>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://via.placeholder.com/400x400?text=Tu+Vai+3D" alt="Tủ Vải 3D" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Tủ Vải 3 Buồng 8 Ngăn</h3>
+                        <p class="text-gray-500 text-sm mb-4">Khung gỗ, họa tiết 3D sang trọng</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold text-xl">350.000đ</span>
+                            <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://via.placeholder.com/400x400?text=Tu+Vai+Khung+Go" alt="Tủ Khung Gỗ" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Tủ Vải Khung Gỗ Sồi</h3>
+                        <p class="text-gray-500 text-sm mb-4">Gỗ tự nhiên, chịu lực cực tốt</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold text-xl">550.000đ</span>
+                            <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://via.placeholder.com/400x400?text=Tu+Vai+Sinh+Vien" alt="Tủ Sinh Viên" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Tủ Vải Sinh Viên</h3>
+                        <p class="text-gray-500 text-sm mb-4">Nhỏ gọn, tiện lợi, giá rẻ</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold text-xl">199.000đ</span>
+                            <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-2xl transition duration-300">
+                    <img src="https://via.placeholder.com/400x400?text=Tu+Vai+Inox" alt="Tủ Inox" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="font-bold text-lg mb-2">Tủ Khung Inox Titan</h3>
+                        <p class="text-gray-500 text-sm mb-4">Sáng bóng, không gỉ sét</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 font-bold text-xl">450.000đ</span>
+                            <button class="bg-blue-600 text-white px-3 py-1 rounded hover:bg-blue-700 text-sm">Mua Ngay</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-blue-900 py-16 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-6">Bạn Cần Tư Vấn Thêm?</h2>
+            <p class="mb-8 text-blue-200">Để lại thông tin hoặc liên hệ hotline để nhận báo giá sỉ tốt nhất từ Tổng Kho.</p>
+            
+            <div class="max-w-lg mx-auto bg-white rounded-lg p-8 text-gray-800 shadow-2xl">
+                <form>
+                    <div class="mb-4">
+                        <input type="text" placeholder="Họ và tên của bạn" class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="mb-4">
+                        <input type="tel" placeholder="Số điện thoại Zalo" class="w-full px-4 py-3 rounded border border-gray-300 focus:outline-none focus:border-blue-500">
+                    </div>
+                    <button type="button" class="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded transition text-lg uppercase">
+                        Đăng Ký Nhận Tư Vấn
+                    </button>
+                </form>
+                <div class="mt-6 border-t pt-4">
+                    <p class="font-bold text-gray-600">Hoặc gọi ngay Hotline:</p>
+                    <p class="text-2xl font-black text-red-600">09xx.xxx.xxx</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="mb-2 font-bold text-white">TỔNG KHO TỦ VẢI - UY TÍN TẠO NIỀM TIN</p>
+            <p class="text-sm">Website: <a href="https://tongkhotuvai.online" class="text-blue-400">tongkhotuvai.online</a></p>
+            <p class="text-sm mt-4">&copy; 2026 Tổng Kho Tủ Vải. All rights reserved.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
