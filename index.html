@@ -3,270 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tổng Kho Tủ Vải Cao Cấp | Premium Quality</title>
+    <title>Tổng Kho Tủ Vải Cao Cấp | Khung Thép Titan</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* --- CẤU HÌNH GIAO DIỆN PREMIUM --- */
+        /* --- CẤU HÌNH GIAO DIỆN --- */
         :root {
-            --primary-gradient: linear-gradient(135deg, #ff512f 0%, #dd2476 100%); /* Màu cam đỏ hiện đại */
-            --secondary-color: #1f2937; /* Màu đen than sang trọng */
-            --accent-color: #10b981; /* Màu xanh lá tin cậy */
-            --bg-color: #f3f4f6;
-            --card-bg: #ffffff;
-            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --primary: #ee4d2d; /* Cam Shopee */
+            --dark: #1f2937;
+            --light: #f3f4f6;
+            --gradient: linear-gradient(135deg, #ff512f 0%, #dd2476 100%);
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--secondary-color);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-            padding-bottom: 80px; /* Chừa chỗ cho thanh menu đáy */
-        }
-
-        h1, h2, h3 { font-family: 'Poppins', sans-serif; margin: 0; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--light); color: var(--dark); margin: 0; padding-bottom: 80px; }
         .container { max-width: 800px; margin: 0 auto; overflow: hidden; }
+        img { max-width: 100%; height: auto; display: block; margin: 10px auto; border-radius: 10px; }
         
         /* HEADER */
-        header {
-            background: white;
-            padding: 15px 20px;
-            box-shadow: var(--shadow-sm);
-            position: sticky; top: 0; z-index: 100;
-            display: flex; justify-content: space-between; align-items: center;
-        }
-        .logo { font-weight: 700; font-size: 18px; color: #dd2476; text-transform: uppercase; letter-spacing: 1px; }
-        .trusted-badge { font-size: 12px; background: #ecfdf5; color: var(--accent-color); padding: 5px 10px; border-radius: 20px; font-weight: 600; }
+        header { background: white; padding: 15px; text-align: center; font-weight: 700; font-size: 18px; color: #dd2476; text-transform: uppercase; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 99; }
 
-        /* HERO SECTION - Gây ấn tượng mạnh */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1556020685-ae79c95e3d35?auto=format&fit=crop&w=1000');
-            background-size: cover; background-position: center;
-            color: white; padding: 60px 20px; text-align: center;
-            border-bottom-left-radius: 30px; border-bottom-right-radius: 30px;
-            box-shadow: var(--shadow-lg); margin-bottom: 30px;
-        }
-        .hero h1 { font-size: 28px; line-height: 1.3; margin-bottom: 15px; text-shadow: 0 2px 4px rgba(0,0,0,0.3); }
-        .hero-badge { display: inline-block; background: #ffeb3b; color: #333; font-weight: bold; padding: 5px 15px; border-radius: 50px; font-size: 14px; margin-bottom: 15px; box-shadow: 0 4px 10px rgba(255, 235, 59, 0.3); }
+        /* HERO SECTION */
+        .hero { background: white; padding: 20px; text-align: center; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
+        .hero h1 { font-size: 26px; margin: 10px 0; line-height: 1.3; color: var(--dark); }
+        .hero-badge { background: #ffeb3b; color: #333; padding: 5px 15px; border-radius: 20px; font-weight: bold; font-size: 13px; display: inline-block; }
 
-        /* CARD STYLE - Khối nội dung đẹp */
-        .card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 25px;
-            margin: 20px;
-            box-shadow: var(--shadow-lg);
-            border: 1px solid rgba(0,0,0,0.02);
-        }
+        /* SECTION CARD */
+        .card { background: white; border-radius: 16px; padding: 20px; margin: 15px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .section-title { text-align: center; font-size: 20px; font-weight: 700; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid #eee; padding-bottom: 10px; color: var(--dark); }
         
-        .section-title {
-            text-align: center; font-size: 22px; font-weight: 700; margin-bottom: 25px;
-            position: relative; display: inline-block; width: 100%;
-        }
-        .section-title::after {
-            content: ''; display: block; width: 50px; height: 4px; 
-            background: var(--primary-gradient); margin: 8px auto; border-radius: 2px;
-        }
-
-        /* PAIN POINTS LIST */
-        .pain-point { display: flex; align-items: center; margin-bottom: 15px; background: #fff1f2; padding: 12px; border-radius: 10px; color: #be123c; font-weight: 500; }
-        .pain-point i { margin-right: 12px; font-size: 20px; }
-
-        /* FEATURES GRID */
-        .feature-grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
-        .feature-item { background: #f9fafb; padding: 20px; border-radius: 12px; text-align: center; transition: 0.3s; }
-        .feature-item:hover { transform: translateY(-5px); background: white; box-shadow: var(--shadow-lg); }
-        .feature-icon { width: 50px; height: 50px; background: #e0e7ff; color: #4f46e5; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; font-size: 20px; }
-        
-        /* PRICING & OFFER */
-        .price-tag { text-align: center; margin: 20px 0; }
-        .price-old { color: #9ca3af; text-decoration: line-through; font-size: 16px; display: block; }
-        .price-new { color: #dd2476; font-size: 36px; font-weight: 800; font-family: 'Poppins', sans-serif; }
-        
-        /* FORM DESIGN */
-        .input-group { margin-bottom: 15px; }
-        .input-group label { display: block; font-weight: 600; margin-bottom: 8px; font-size: 14px; color: #4b5563; }
-        .input-field {
-            width: 100%; padding: 14px; border: 2px solid #e5e7eb; border-radius: 10px;
-            font-size: 16px; outline: none; transition: 0.3s; box-sizing: border-box; font-family: 'Inter', sans-serif;
-        }
-        .input-field:focus { border-color: #dd2476; background: #fffbfc; }
+        /* FEATURE IMAGE BOX */
+        .img-box { margin-bottom: 20px; text-align: center; }
+        .img-desc { font-size: 14px; color: #666; font-style: italic; margin-top: 5px; }
 
         /* BUTTONS */
-        .btn-main {
-            display: block; width: 100%; padding: 16px; text-align: center;
-            background: var(--primary-gradient); color: white;
-            font-weight: 700; font-size: 18px; border-radius: 12px;
-            text-decoration: none; border: none; cursor: pointer;
-            box-shadow: 0 4px 15px rgba(221, 36, 118, 0.4);
-            transition: 0.3s;
-        }
-        .btn-main:active { transform: scale(0.98); }
-        .btn-shopee { background: #ee4d2d; color: white; display: flex; justify-content: center; align-items: center; gap: 10px; }
+        .btn-main { display: block; width: 100%; padding: 15px; text-align: center; background: var(--gradient); color: white; font-weight: 700; font-size: 18px; border-radius: 50px; text-decoration: none; border: none; cursor: pointer; box-shadow: 0 4px 15px rgba(221, 36, 118, 0.4); margin-top: 10px; }
+        .btn-shopee { background: #ee4d2d; display: flex; align-items: center; justify-content: center; gap: 10px; }
 
-        /* STICKY BOTTOM BAR */
-        .bottom-nav {
-            position: fixed; bottom: 0; left: 0; width: 100%;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px); /* Hiệu ứng kính mờ */
-            padding: 12px 20px;
-            box-shadow: 0 -4px 20px rgba(0,0,0,0.05);
-            display: flex; align-items: center; justify-content: space-between;
-            z-index: 1000; box-sizing: border-box;
-        }
-        .bottom-price { font-weight: 700; font-size: 20px; color: #dd2476; }
-        .bottom-btn {
-            background: var(--primary-gradient); color: white;
-            padding: 10px 25px; border-radius: 30px; font-weight: 600; text-decoration: none;
-            box-shadow: 0 4px 12px rgba(221, 36, 118, 0.3);
-        }
+        /* FORM */
+        .input-group { margin-bottom: 15px; }
+        .input-field { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 16px; box-sizing: border-box; }
 
-        /* Responsive Fix */
-        @media (min-width: 600px) {
-            .feature-grid { grid-template-columns: 1fr 1fr; }
-        }
+        /* STICKY FOOTER */
+        .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.95); padding: 10px 20px; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; backdrop-filter: blur(5px); z-index: 100; }
+        .bottom-price { font-size: 20px; font-weight: bold; color: #dd2476; }
+        .bottom-btn { background: var(--gradient); color: white; padding: 8px 25px; border-radius: 20px; font-weight: 600; text-decoration: none; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo">KFS WARDROBE</div>
-        <div class="trusted-badge"><i class="fas fa-check-circle"></i> Uy tín 100%</div>
-    </header>
+    <header><i class="fas fa-crown"></i> TỔNG KHO TỦ VẢI</header>
 
     <div class="hero">
-        <div class="hero-badge">BEST SELLER 2026</div>
-        <h1>TỦ VẢI KHUNG TITAN<br>CHỊU LỰC 70KG</h1>
-        <p>Giải pháp tối ưu không gian sống. Bền bỉ - Gọn gàng - Tiết kiệm.</p>
-        <a href="#mua-ngay" class="btn-main btn-shopee" style="max-width: 300px; margin: 20px auto; border-radius: 50px;">
-            <i class="fas fa-shopping-cart"></i> Mua Ngay Trên Shopee
+        <div class="hero-badge">PHIÊN BẢN NÂNG CẤP 2026</div>
+        <h1>TỦ VẢI KHUNG THÉP<br>SIÊU CHỊU LỰC</h1>
+        
+        <img src="banner.jpg" alt="Tủ vải khung thép cao cấp">
+        
+        <div style="font-size: 28px; color: #ee4d2d; font-weight: bold; margin: 10px 0;">299.000đ</div>
+        <p style="color: #666; font-size: 14px; margin-bottom: 15px;">Giải pháp tối ưu cho phòng trọ & chung cư</p>
+        
+        <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-main btn-shopee">
+            <i class="fas fa-shopping-bag"></i> MUA TRÊN SHOPEE
         </a>
     </div>
 
     <div class="container">
+        
         <div class="card">
-            <h2 class="section-title">NỖI KHỔ CỦA BẠN?</h2>
-            <div class="pain-point">
-                <i class="fas fa-times-circle"></i>
-                <span>Phòng trọ chật, quần áo vứt lung tung?</span>
+            <h2 class="section-title">CHẤP HẾT CÁC LOẠI ĐỒ NẶNG</h2>
+            <div class="img-box">
+                <img src="chiu-luc.jpg" alt="Test chịu lực bình nước">
+                <div class="img-desc">Thử nghiệm thực tế: Chịu tải hơn 1600 cân (tương đương hàng chục bình nước) mà khung vẫn thẳng đứng.</div>
             </div>
-            <div class="pain-point">
-                <i class="fas fa-times-circle"></i>
-                <span>Tủ gỗ quá đắt và nặng nề khi chuyển nhà?</span>
-            </div>
-            <div class="pain-point">
-                <i class="fas fa-times-circle"></i>
-                <span>Tủ vải giá rẻ ọp ẹp, treo vài bộ là sập?</span>
+            <p>✅ <strong>Khung thép Titan:</strong> Đường kính lớn, không lo cong vênh như tủ chợ.</p>
+            <p>✅ <strong>Sức chứa khủng:</strong> Treo quần áo mùa đông, chăn màn thoải mái.</p>
+        </div>
+
+        <div class="card">
+            <h2 class="section-title">NÂNG CẤP KHỚP NỐI HỢP KIM</h2>
+            <div class="img-box">
+                <img src="khop-noi.jpg" alt="Khớp nối kim loại">
+                <div class="img-desc">Khớp nối bằng hợp kim siêu bền (bánh xe đè không vỡ) thay thế cho khớp nhựa giòn dễ gãy đời cũ.</div>
             </div>
         </div>
 
-        <div class="card" style="background: transparent; box-shadow: none; border: none; padding: 0;">
-            <h2 class="section-title">GIẢI PHÁP TỐI ƯU</h2>
-            <div class="feature-grid">
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-dumbbell"></i></div>
-                    <h3>Khung Thép Titan</h3>
-                    <p style="font-size: 14px; color: #666;">Đường kính 25mm siêu cứng, chịu tải 70kg tương đương 2 người lớn.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
-                    <h3>Vải Oxford 3 Lớp</h3>
-                    <p style="font-size: 14px; color: #666;">Chống nước, chống ẩm mốc, dai khó rách và dễ dàng giặt sạch.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-magic"></i></div>
-                    <h3>Lắp Ghép 15 Phút</h3>
-                    <p style="font-size: 14px; color: #666;">Khớp nối nhựa ABS thông minh, ai cũng tự lắp được không cần khoan.</p>
-                </div>
-                <div class="feature-item">
-                    <div class="feature-icon"><i class="fas fa-medal"></i></div>
-                    <h3>Bảo Hành 12 Tháng</h3>
-                    <p style="font-size: 14px; color: #666;">Lỗi 1 đổi 1 trong 30 ngày đầu tiên nếu có lỗi từ nhà sản xuất.</p>
-                </div>
+        <div class="card">
+            <h2 class="section-title">VẢI BÔNG POLYESTER CAO CẤP</h2>
+            <div class="img-box">
+                <img src="vai.jpg" alt="Chất liệu vải">
             </div>
+            <ul style="padding-left: 20px; line-height: 1.8;">
+                <li>Chống thấm nước, chống ẩm mốc.</li>
+                <li>Vải dai, không mùi, thân thiện môi trường.</li>
+                <li>Có thể tháo rời để giặt sạch dễ dàng.</li>
+            </ul>
         </div>
 
-        <div class="card" id="mua-ngay" style="border: 2px solid #dd2476;">
-            <h2 class="section-title">ĐẶT HÀNG NGAY</h2>
+        <div class="card">
+            <h2 class="section-title">KÍCH THƯỚC SẢN PHẨM</h2>
+            <img src="kich-thuoc.jpg" alt="Các kích thước tủ">
+            <p style="text-align: center;">Đầy đủ kích thước từ 85cm đến 2m05 phù hợp mọi diện tích phòng.</p>
+        </div>
+
+        <div class="card" id="dat-hang" style="border: 2px solid #ee4d2d;">
+            <h2 class="section-title" style="color: #ee4d2d; border: none;">ĐẶT HÀNG NGAY</h2>
             
-            <div class="price-tag">
-                <span class="price-old">Giá gốc: 550.000đ</span>
-                <span class="price-new">299.000đ</span>
-                <div style="color: #10b981; font-weight: 600; margin-top: 5px;">
-                    <i class="fas fa-truck"></i> Freeship cho 50 đơn đầu tiên
-                </div>
-            </div>
-
             <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-main btn-shopee" style="margin-bottom: 20px;">
-                <i class="fas fa-shopping-bag"></i> Mua trên Shopee (Có mã giảm)
+                <i class="fas fa-shopping-bag"></i> Mua Shopee (Freeship + Hoàn Xu)
             </a>
 
-            <div style="text-align: center; color: #9ca3af; margin: 15px 0; font-size: 14px;">— HOẶC ĐIỀN FORM (COD) —</div>
+            <div style="text-align: center; margin: 15px 0; color: #999;">--- HOẶC ĐIỀN FORM COD ---</div>
 
             <form id="orderForm" onsubmit="xuLyDonHang(event)">
                 <div class="input-group">
-                    <label>Họ tên người nhận</label>
-                    <input type="text" id="name" class="input-field" placeholder="Ví dụ: Nguyễn Văn A" required>
+                    <input type="text" id="name" class="input-field" placeholder="Họ tên của bạn..." required>
                 </div>
                 <div class="input-group">
-                    <label>Số điện thoại</label>
-                    <input type="tel" id="phone" class="input-field" placeholder="Ví dụ: 09xx.xxx.xxx" required>
+                    <input type="tel" id="phone" class="input-field" placeholder="Số điện thoại..." required>
                 </div>
                 <div class="input-group">
-                    <label>Địa chỉ nhận hàng</label>
-                    <input type="text" id="address" class="input-field" placeholder="Số nhà, Đường, Xã/Phường..." required>
+                    <input type="text" id="address" class="input-field" placeholder="Địa chỉ nhận hàng..." required>
                 </div>
                 <div class="input-group">
-                    <label>Chọn màu sắc</label>
                     <select id="color" class="input-field">
-                        <option value="Xanh Than">Xanh Than (Sạch sẽ)</option>
-                        <option value="Do Do">Đỏ Đô (Nổi bật)</option>
-                        <option value="Hoa Tiet">Họa Tiết 3D (Trẻ trung)</option>
+                        <option value="Xanh">Màu Xanh</option>
+                        <option value="Do">Màu Đỏ</option>
+                        <option value="Hoa Tiet">Họa Tiết</option>
                     </select>
                 </div>
-                <button type="submit" class="btn-main">GỬI ĐƠN HÀNG NGAY</button>
-                <p style="text-align: center; font-size: 13px; color: #666; margin-top: 10px;">
-                    *Nhân viên sẽ gọi lại xác nhận trước khi gửi hàng.
-                </p>
+                <button type="submit" class="btn-main">GỬI ĐƠN HÀNG</button>
             </form>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">KHÁCH HÀNG NÓI GÌ?</h2>
-            <div style="border-bottom: 1px solid #eee; padding-bottom: 15px; margin-bottom: 15px;">
-                <div style="color: #fbbf24; font-size: 14px; margin-bottom: 5px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p style="margin: 0; font-style: italic;">"Hàng đẹp, khung chắc chắn hơn mình nghĩ nhiều. Giao hàng nhanh."</p>
-                <div style="font-weight: 600; margin-top: 5px; font-size: 14px;">- Chị Lan (Hà Nội)</div>
-            </div>
-            <div>
-                <div style="color: #fbbf24; font-size: 14px; margin-bottom: 5px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                <p style="margin: 0; font-style: italic;">"Lắp dễ lắm, phòng gọn hẳn. 299k quá rẻ cho chất lượng này."</p>
-                <div style="font-weight: 600; margin-top: 5px; font-size: 14px;">- Anh Tuấn (TP.HCM)</div>
-            </div>
         </div>
 
     </div>
 
     <div class="bottom-nav">
         <div>
-            <div style="font-size: 12px; color: #666; text-decoration: line-through;">550.000đ</div>
+            <div style="font-size: 12px; text-decoration: line-through; color: #999;">550.000đ</div>
             <div class="bottom-price">299.000đ</div>
         </div>
-        <a href="#mua-ngay" class="bottom-btn">MUA NGAY</a>
+        <a href="#dat-hang" class="bottom-btn">MUA NGAY</a>
     </div>
 
     <script>
         function xuLyDonHang(e) {
             e.preventDefault();
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            alert(`Cảm ơn ${name}! Đơn hàng đã được ghi nhận. Shop sẽ liên hệ SĐT ${phone} để chốt đơn ngay!`);
-            document.getElementById('orderForm').reset();
+            alert("Đã gửi đơn hàng thành công! Shop sẽ liên hệ lại ngay.");
         }
     </script>
 </body>
