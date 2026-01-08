@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Tổng Kho Tủ Vải | Tủ Vải Khung Thép Cao Cấp</title>
+    <title>TỔNG KHO TỦ VẢI | Tủ Vải Khung Thép Cao Cấp</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&family=Inter:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
     <style>
-        /* --- CẤU HÌNH GIAO DIỆN KFS STORE --- */
+        /* --- CẤU HÌNH GIAO DIỆN TỔNG KHO --- */
         :root {
-            --brand-color: #d81b60; /* Màu hồng đậm logo KFS */
-            --primary: #ee4d2d; /* Màu cam Shopee */
+            /* Giữ nguyên màu chủ đạo để đồng bộ Shopee */
+            --brand-color: #d81b60; 
+            --primary: #ee4d2d; 
             --dark: #1f2937;
             --light: #f9fafb;
             --gradient: linear-gradient(135deg, #ee4d2d 0%, #ff4081 100%);
@@ -29,7 +30,7 @@
         .logo {
             font-family: 'Poppins', sans-serif;
             font-weight: 800;
-            font-size: 24px;
+            font-size: 22px; /* Giảm nhẹ font size để tên dài không bị tràn */
             color: var(--brand-color);
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -61,104 +62,4 @@
         /* STICKY FOOTER */
         .bottom-nav { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255,255,255,0.98); padding: 12px 20px; box-shadow: 0 -5px 20px rgba(0,0,0,0.1); display: flex; justify-content: space-between; align-items: center; z-index: 100; border-top: 1px solid #eee; }
         .bottom-price { font-size: 24px; font-weight: 800; color: var(--brand-color); }
-        .bottom-btn { background: var(--primary); color: white; padding: 12px 30px; border-radius: 30px; font-weight: 700; text-decoration: none; box-shadow: 0 4px 15px rgba(238, 77, 45, 0.3); }
-
-        @keyframes pulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(238, 77, 45, 0.7); }
-            70% { transform: scale(1.02); box-shadow: 0 0 0 15px rgba(238, 77, 45, 0); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(238, 77, 45, 0); }
-        }
-    </style>
-</head>
-<body>
-
-    <header>
-        <div class="logo">KFS WARDROBE</div>
-        <div style="font-size: 12px; color: #666; margin-top: 5px; font-weight: 500;">HỆ THỐNG TỔNG KHO TỦ VẢI</div>
-    </header>
-
-    <div class="hero">
-        <div class="hero-badge">BEST SELLER 2026</div>
-        <h1>TỦ VẢI KHUNG TITAN<br>SIÊU CHỊU LỰC</h1>
-        
-        <img src="banner.jpg" alt="Tủ vải khung thép cao cấp KFS">
-        
-        <div style="font-size: 32px; color: var(--brand-color); font-weight: 800; margin: 10px 0;">299.000đ</div>
-        <p style="color: #555; font-size: 15px; margin-bottom: 20px;">
-            <i class="fas fa-check-circle" style="color: green;"></i> Hàng chính hãng 
-            <i class="fas fa-check-circle" style="color: green; margin-left: 10px;"></i> Freeship Xtra
-        </p>
-        
-        <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-main">
-            <i class="fas fa-shopping-bag"></i> MUA NGAY TRÊN SHOPEE
-        </a>
-    </div>
-
-    <div class="container">
-        
-        <div class="card">
-            <h2 class="section-title">CHẤP HẾT CÁC LOẠI ĐỒ NẶNG</h2>
-            <div style="text-align: center;">
-                <img src="chiu-luc.jpg" alt="Test chịu lực bình nước">
-                <div class="img-desc">Thực tế: Khung Titan chịu tải hàng chục bình nước 20L.</div>
-            </div>
-            <ul style="padding-left: 20px; line-height: 1.8; color: #444; margin-top: 15px;">
-                <li>✅ <strong>Khung thép Titan 25mm:</strong> Cứng gấp đôi tủ thường.</li>
-                <li>✅ <strong>Kết cấu vững chãi:</strong> Không lo xiêu vẹo, đổ sập.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">NÂNG CẤP KHỚP NỐI</h2>
-            <div style="text-align: center;">
-                <img src="khop-noi.jpg" alt="Khớp nối kim loại">
-                <div class="img-desc">Khớp nối siêu bền (bánh xe đè không vỡ).</div>
-            </div>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">VẢI OXFORD CAO CẤP</h2>
-            <img src="vai.jpg" alt="Chất liệu vải">
-            <p style="text-align: justify; color: #555;">
-                Vải Oxford chuyên dụng có độ dai vượt trội, <strong>chống thấm nước</strong> và <strong>ngăn bụi</strong> tuyệt đối. Dễ dàng tháo rời để giặt sạch.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2 class="section-title">BẢNG KÍCH THƯỚC</h2>
-            <img src="kich-thuoc.jpg" alt="Các kích thước tủ">
-            <p style="text-align: center; color: #666;">Đủ size từ 85cm đến 2m05 phù hợp mọi phòng.</p>
-        </div>
-
-        <div class="card" id="dat-hang" style="border: 2px dashed var(--primary); background: #fff5f5;">
-            <h2 class="section-title" style="color: var(--primary); border: none; margin-bottom: 10px;">ƯU ĐÃI ĐỘC QUYỀN</h2>
-            
-            <p style="text-align: center; font-size: 16px; margin-bottom: 20px;">
-                Chương trình giảm giá <strong>40%</strong> chỉ áp dụng khi đặt hàng qua Shopee hôm nay!
-            </p>
-
-            <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="btn-main" style="background: #ee4d2d; font-size: 20px; padding: 20px;">
-                <i class="fas fa-bolt"></i> MUA NGAY GIÁ 299K
-            </a>
-
-            <div style="text-align: center; margin-top: 15px;">
-                <span style="font-size: 13px; color: #666; background: white; padding: 5px 10px; border-radius: 10px; border: 1px solid #eee;">
-                    <i class="fas fa-shield-alt"></i> Được kiểm tra hàng & Hoàn tiền Shopee
-                </span>
-            </div>
-        </div>
-
-    </div>
-
-    <div class="bottom-nav">
-        <div>
-            <div style="font-size: 13px; text-decoration: line-through; color: #999;">550.000đ</div>
-            <div class="bottom-price">299.000đ</div>
-        </div>
-        <a href="https://s.shopee.vn/2LRqIYYNcd" target="_blank" class="bottom-btn">
-            MUA NGAY <i class="fas fa-arrow-right"></i>
-        </a>
-    </div>
-
-</body>
-</html>
+        .bottom
